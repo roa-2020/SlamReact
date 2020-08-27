@@ -1,8 +1,8 @@
 {
-  "name": "taxonomic-routing",
-  "version": "0.2.0",
-  "description": "Using React Router to navigate the taxonomic rank",
-  "repository": "https://github.com/dev-academy-challenges/taxonomic-routing.git",
+  "name": "SlamReact",
+  "version": "0.0.1",
+  "description": "React does things, and it slams in you",
+  "repository": "https://github.com/roa-2020/SlamReact.git",
   "main": "server/index.js",
   "scripts": {
     "start": "run-p webpack server",
