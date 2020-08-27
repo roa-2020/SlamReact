@@ -7,23 +7,23 @@ body {
   font-weight: 300;
 }
 
+/* #app { margin: 0; padding: 0; width: 100%; padding: 100%;} */
 #app {
-  width: 60%;
-  margin: 1em auto;
-  display: grid;
-  grid-template: auto 1fr / minmax(150px, auto) minmax(80%, 1fr);
-  grid-column-gap: 1em;
-}
-@media screen and (max-width: 900px) {
-  #app {
-    width: 80%;
-  }
+  width: 100%;
+  height: 100%;
 }
 
-@media screen and (max-width: 650px) {
-  #app {
-    width: 95%;
-  }
+#body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template: auto auto 1fr / auto;
+  grid-column-gap: 1em;
+}
+
+#body.dark {
+  background-color: #454545;
+  color: #efefef;
 }
 
 h1,
@@ -31,8 +31,8 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.listing {
+h6 {
+  font-weight: 400;
   text-transform: capitalize;
 }
 
@@ -41,35 +41,46 @@ header {
   justify-content: center;
   align-items: center;
   border-bottom: solid 1px #cdcdcd;
-  grid-column: 1 / 3;
 }
+
+
 
 nav {
-  grid-column: 1 / 2;
+  background-color: #efefef;
   display: flex;
-  flex-direction: column;
-  padding: 0 0.5em;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-nav .line {
-  margin: 0.5em 0;
-  border-top: solid 1px hsla(300, 59%, 81%, 0.5);
+.dark nav {
+  background-color: #343434;
 }
 
-a {
-  padding: 0.5em 0;
-  text-transform: capitalize;
-  color: #662266;
+nav a {
   text-decoration: none;
-  transition: all 0.3s;
+  font-weight: 700;
+  padding: 0.5em;
+  color: #454545;
 }
 
-a:hover {
-  opacity: 0.8;
-  padding: 0.5em;
-  background-color: hsla(300, 59%, 81%, 0.26);
-  transition: all 0.3s;
+.dark nav a {
+  color: #efefef;
 }
+
+nav a.active {
+  background-color: rgb(222, 222, 222);
+}
+
+.dark nav a.active {
+  background-color: rgba(222, 222, 222, 0.2);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 main {
   padding: 0 2em;
