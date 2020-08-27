@@ -9,7 +9,7 @@ const Nav = (props) => {
         Home
       </Link>
       <Link className={current === "/Scroller" ? "active" : ""} to="/Scroller">
-        Scroller
+        WonderBoy
       </Link>
       <Link className={current === "/Banner" ? "active" : ""} to="/Banner">
         Bruce
