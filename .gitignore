@@ -1,5 +1,6 @@
 node_modules
-public/bundle.*
+public/bundle.js
+public/bundle.js.min
 static
 npm-debug.log
 

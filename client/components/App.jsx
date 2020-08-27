@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter as Router, Route} from "react-router-dom";
 
 // Import Routes
+import Header from './Header'
 import Home from './Home'
 import Scroller from './Scroller'
 import Banner from './Banner'
@@ -34,10 +35,9 @@ class App extends React.Component {
     return (      
       <Router>
         <div id="body" className={this.state.theme}>
+          <Header />
           <Nav icon={this.state.icon} toggle={this.toggleTheme} />
-          <header>
-            <img src="/images/logo.png" />
-          </header>
+          
           <div className="container">
             <Route exact path="/" component={Home} /> 
             <Route path="/Scroller" component={Scroller} /> 
