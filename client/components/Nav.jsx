@@ -6,7 +6,6 @@ class Nav extends React.Component {
     super(props);
     this.state = {
       current: location.pathname,
-      icon: this.props.icon,
       toggle: this.props.toggle,
     };
   }
@@ -19,7 +18,7 @@ class Nav extends React.Component {
         <Link to="/Scroller">Scroller</Link>
         <Link to="/Banner">Banner</Link>
         <Link to="/" onClick={this.state.toggle}>
-          <i className={this.state.icon}></i>
+          <i className={this.props.icon}></i>
         </Link>
       </nav>
     );

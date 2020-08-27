@@ -12,15 +12,22 @@ class App extends React.Component {
     super(props)
     this.state = {
       theme: 'light',
-      icon: 'fas fa-adjust',
+      icon: 'fas fa-sun',
     }
   }
 
-  toggleTheme = (theme) => {
-    this.setState({
-      theme: theme,
-      icon: (theme === 'light' ? 'fas fa-sun' : 'fas fa-moon')
-    })
+  toggleTheme = () => {
+    if (this.state.theme === 'light'){
+      this.setState({
+        theme: 'dark',
+        icon: 'fas fa-moon'
+      })
+    } else {
+      this.setState({
+        theme: 'light',
+        icon: 'fas fa-sun'
+      })
+    }
   }
 
   render(){
