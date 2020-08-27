@@ -1,10 +1,11 @@
 import React from "react";
-import { HashRouter as Router, Route, Link, useLocation } from "react-router-dom";
+import { HashRouter as Router, Route} from "react-router-dom";
 
 // Import Routes
 import Home from './Home'
 import Scroller from './Scroller'
 import Banner from './Banner'
+import Nav from './Nav'
 
 class App extends React.Component {
   constructor(props){
@@ -25,9 +26,8 @@ class App extends React.Component {
   render(){
     return (      
       <Router>
-        {console.log(location)}
         <div id="body" className={this.state.theme}>
-          {/* <Nav icon={this.state.icon} toggle={this.toggleTheme} /> */}
+          <Nav icon={this.state.icon} toggle={this.toggleTheme} />
           <header>
             <img src="/images/logo.png" />
           </header>
