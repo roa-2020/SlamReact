@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      theme: 'dark',
+      theme: 'light',
       icon: 'fas fa-adjust',
     }
   }
@@ -23,7 +23,7 @@ class App extends React.Component {
             <Link to="/"><i className={this.state.icon}></i></Link>
           </nav>
           <header>
-            <h1>SlamReact</h1>
+            <img src="/images/logo.png" />
           </header>
           <div className="container">
             <Route exact path="/" component={Home} /> 
