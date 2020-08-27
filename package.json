@@ -5,7 +5,7 @@
   "repository": "https://github.com/roa-2020/SlamReact.git",
   "main": "server/index.js",
   "scripts": {
-    "start": "run server",
+    "start": "node server",
     "dev": "run-p client server",
     "webpack": "webpack",
     "client": "webpack --watch",
