@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link, useLocation } from "react-router-dom";
 
 // Import Routes
 import Home from './Home'
@@ -15,8 +15,9 @@ class App extends React.Component {
     }
   }
   render(){
-    return (
+    return (      
       <Router>
+        {console.log(location)}
         <div id="body" className={this.state.theme}>
           <nav>
             <Link className="active" to="/">Home</Link>
