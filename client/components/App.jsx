@@ -3,6 +3,8 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 // Import Routes
 import Home from './Home'
+import Scroller from './Scroller'
+import Banner from './Banner'
 
 class App extends React.Component {
   constructor(props){
@@ -18,8 +20,8 @@ class App extends React.Component {
         <div id="body" className={this.state.theme}>
           <nav>
             <Link className="active" to="/">Home</Link>
-            <Link to="/">Scroller</Link>
-            <Link to="/">Banner</Link>
+            <Link to="/Scroller">Scroller</Link>
+            <Link to="/Banner">Banner</Link>
             <Link to="/"><i className={this.state.icon}></i></Link>
           </nav>
           <header>
@@ -27,6 +29,8 @@ class App extends React.Component {
           </header>
           <div className="container">
             <Route exact path="/" component={Home} /> 
+            <Route path="/Scroller" component={Scroller} /> 
+            <Route path="/Banner" component={Banner} /> 
           </div>
         </div>
       </Router>
