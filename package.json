@@ -1,5 +1,5 @@
 {
-  "name": "SlamReact",
+  "name": "slamreact",
   "version": "0.0.1",
   "description": "React does things, and it slams in you",
   "repository": "https://github.com/roa-2020/SlamReact.git",
@@ -28,7 +28,7 @@
       "./tests/setup-env.js"
     ]
   },
-  "author": "EDA",
+  "author": "Anthony McGrath: anthony-kyle, Lex Stokes: lex-stokes, Seamus Ahkit: seamus-ahkit, Matt Saunders:itsmattsaunders",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.2",
