@@ -1,0 +1,81 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+#app {
+  width: 60%;
+  margin: 1em auto;
+  display: grid;
+  grid-template: auto 1fr / minmax(150px, auto) minmax(80%, 1fr);
+  grid-column-gap: 1em;
+}
+@media screen and (max-width: 900px) {
+  #app {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #app {
+    width: 95%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.listing {
+  text-transform: capitalize;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px #cdcdcd;
+  grid-column: 1 / 3;
+}
+
+nav {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5em;
+}
+
+nav .line {
+  margin: 0.5em 0;
+  border-top: solid 1px hsla(300, 59%, 81%, 0.5);
+}
+
+a {
+  padding: 0.5em 0;
+  text-transform: capitalize;
+  color: #662266;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  opacity: 0.8;
+  padding: 0.5em;
+  background-color: hsla(300, 59%, 81%, 0.26);
+  transition: all 0.3s;
+}
+
+main {
+  padding: 0 2em;
+  grid-column: 2 / 3;
+}
+
+a.selected {
+  font-weight: 700;
+}
