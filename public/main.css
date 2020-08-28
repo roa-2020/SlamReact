@@ -159,6 +159,35 @@ input[type="text"]:focus {
   background-color: #454545;
 }
 
+button {
+  margin-top: 1em;
+  background-color: #EB4222;
+  border-radius: 10px;
+  padding: 0.5em;
+  color: #efefef;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.dark button {
+  background-color: #FEDF3A;
+  color: #232323;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+button:active {
+  opacity: 0.8;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+
 
 
 
