@@ -131,3 +131,34 @@ input[type="text"] {
 input[type="text"]:focus {
   outline: none;
 }
+
+#pixelBoard {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+#pixelBoard .row {
+  display: flex;
+  justify-content: center;
+}
+
+#pixelBoard .row div {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border: solid 1px #cdcdcd;
+}
+
+#pixelBoard .row div.on {
+  background-color: #232323;
+}
+.dark #pixelBoard .row div.on {
+  background-color: #efefef;
+}
+.dark #pixelBoard .row div.off {
+  background-color: #454545;
+}
+
+
+
+
