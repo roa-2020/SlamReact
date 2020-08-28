@@ -38,6 +38,7 @@ class App extends React.Component {
           <Header />
           <Nav
             icon={this.state.icon}
+            theme={this.state.theme}
             toggle={() => {
               this.toggleTheme(this.state.theme === "light" ? "dark" : "light");
             }}

@@ -60,11 +60,24 @@ header img {
   width: auto;
 }
 
+a {
+  color: #EB4222;
+  font-size: 2em;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.dark a {
+  color: #FEDF3A;
+}
 nav {
   background-color: #efefef;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 11px;
 }
 
 .dark nav {
@@ -92,6 +105,7 @@ nav a.active {
 
 .container {
   width: 80%;
+  padding: 1em;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -112,4 +126,8 @@ input[type="text"] {
   margin: 10px 5px;
   border-radius: 7px;
   box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline: none;
 }
