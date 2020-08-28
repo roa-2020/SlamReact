@@ -1,52 +1,62 @@
 import React from "react";
-import { HashRouter as Router, Route} from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 
 // Import Routes
-import Home from './Home'
-import Scroller from './Scroller'
-import Banner from './Banner'
-import Nav from './Nav'
+import Header from "./Header";
+import Home from "./Home";
+import Scroller from "./Scroller";
+import Banner from "./Banner";
+import Nav from "./Nav";
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      theme: 'light',
-      icon: 'fas fa-sun',
-    }
+      theme: "light",
+      icon: "fas fa-sun",
+    };
   }
 
-  toggleTheme = () => {
-    if (this.state.theme === 'light'){
+  toggleTheme = (theme) => {
+    if (theme === "dark") {
       this.setState({
-        theme: 'dark',
-        icon: 'fas fa-moon'
-      })
+        theme: "dark",
+        icon: "fas fa-moon",
+      });
     } else {
       this.setState({
-        theme: 'light',
-        icon: 'fas fa-sun'
-      })
+        theme: "light",
+        icon: "fas fa-sun",
+      });
     }
-  }
+  };
 
-  render(){
-    return (      
+  render() {
+    return (
       <Router>
         <div id="body" className={this.state.theme}>
-          <Nav icon={this.state.icon} toggle={this.toggleTheme} />
-          <header>
-            <img src="/images/logo.png" />
-          </header>
+          <Header />
+          <Nav
+            icon={this.state.icon}
+            theme={this.state.theme}
+            toggle={() => {
+              this.toggleTheme(this.state.theme === "light" ? "dark" : "light");
+            }}
+          />
+
           <div className="container">
-            <Route exact path="/" component={Home} /> 
-            <Route path="/Scroller" component={Scroller} /> 
-            <Route path="/Banner" component={Banner} /> 
+            <Route
+              exact
+              path="/"
+              render={(props) => <Home {...props} toggle={this.toggleTheme} />}
+            />
+            <Route path="/Scroller" component={Scroller} />
+            <Route path="/Banner" component={Banner} />
           </div>
         </div>
       </Router>
     );
   }
-};
+}
 
 export default App;
