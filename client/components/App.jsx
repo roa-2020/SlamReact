@@ -39,7 +39,7 @@ class App extends React.Component {
             <img src="/images/logo.png" />
           </header>
           <div className="container">
-            <Route exact path="/" component={Home} /> 
+            <Route exact path="/" render={(props)=> <Home {...props} toggle={this.toggleTheme}/>}/> 
             <Route path="/Scroller" component={Scroller} /> 
             <Route path="/Banner" component={Banner} /> 
           </div>
