@@ -3,7 +3,7 @@ body {
   margin: 0px;
   width: 100vw;
   height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
 
@@ -14,14 +14,16 @@ body {
 }
 
 .anime {
-  display:block;
+  display: block;
   width: 100%;
   font-size: 150px;
   position: absolute;
   top: 0px;
 }
 
-.hidden {display: none;}
+.hidden {
+  display: none;
+}
 
 #body {
   height: 100%;
@@ -95,7 +97,6 @@ nav a.active {
   position: relative;
 }
 
-
 main {
   padding: 0 2em;
   grid-column: 2 / 3;
@@ -103,4 +104,12 @@ main {
 
 a.selected {
   font-weight: 700;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 15px 22px;
+  margin: 10px 5px;
+  border-radius: 7px;
+  box-sizing: border-box;
 }
