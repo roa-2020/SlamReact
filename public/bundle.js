@@ -486,6 +486,12 @@ var Input = /*#__PURE__*/function (_React$Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "showCompletedMessage", function () {
+      _this.setState({
+        sliders: [].concat(_toConsumableArray(_this.state.sliders), [_this.state.message])
+      });
+    });
+
     return _this;
   }
 
@@ -495,8 +501,11 @@ var Input = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "textField",
+        onChange: this.displayMessage,
         onKeyPress: this.createSlider
-      }), console.log(this.state.key, this.state.sliders), this.state.sliders.map(function (message, i) {
+      }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.showCompletedMessage
+      }, "Fire!"), console.log(this.state.key, this.state.sliders), this.state.sliders.map(function (message, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slider__WEBPACK_IMPORTED_MODULE_1__["default"], {
           key: string_hash__WEBPACK_IMPORTED_MODULE_2___default()("".concat(message, " ").concat(i)),
           value: message
