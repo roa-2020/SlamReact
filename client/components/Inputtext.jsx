@@ -23,10 +23,23 @@ class Input extends React.Component {
     });
   };
 
+  showCompletedMessage = () => {
+    this.setState({
+      sliders: [...this.state.sliders, this.state.message],
+    });
+  };
+
   render() {
     return (
       <>
-        <input type="text" name="textField" onKeyPress={this.createSlider} />
+        <input
+          type="text"
+          name="textField"
+          onChange={this.displayMessage}
+          onKeyPress={this.createSlider}
+        />{" "}
+        <br />
+        <button onClick={this.showCompletedMessage}>Fire!</button>
         {console.log(this.state.key, this.state.sliders)}
         {this.state.sliders.map((message, i) => {
           return <Slider key={Hash(`${message} ${i}`)} value={message} />;
