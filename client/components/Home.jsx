@@ -9,10 +9,10 @@ const Home = (props) => {
   console.log(props)
     return (
       <>
-        <h1>Home</h1>
-        <p>Welcome to home</p>
         <Link to="/Scroller" onClick={()=>{props.toggle("dark")}}>Go to the Dark Scroll</Link><br></br>
-        <Link to="/Scroller" onClick={()=>{props.toggle("light")}}>Go to the Light Scroll</Link>
+        <Link to="/Scroller" onClick={()=>{props.toggle("light")}}>Go to the Light Scroll</Link><br></br>
+        <Link to="/Banner" onClick={()=>{props.toggle("light")}}>Go to the Bruce</Link><br></br>
+        <Link to="/Banner" onClick={()=>{props.toggle("dark")}}>Go to the Hulk</Link>
         <Slider value="Meow" />
       </>
     )

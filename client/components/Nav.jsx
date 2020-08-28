@@ -12,7 +12,7 @@ const Nav = (props) => {
         WonderBoy
       </Link>
       <Link className={current === "/Banner" ? "active" : ""} to="/Banner">
-        Bruce
+        {props.theme === 'light' ? 'Bruce' : 'Hulk'}
       </Link>
       <Link to={current} hash="/#" onClick={props.toggle}>
         <i className={props.icon}></i>
